@@ -4,7 +4,11 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.6.3'
 
 gem 'rails', '~> 6.0.3', '>= 6.0.3.4'
-gem 'sqlite3', '~> 1.4'
+# gem 'sqlite3', '~> 1.4'
+group :production do
+  gem 'pg'
+end
+
 gem 'puma', '~> 4.1'
 gem 'sass-rails', '>= 6'
 gem 'webpacker', '~> 4.0'
@@ -31,7 +35,3 @@ group :test do
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-
-group :production do
-  gem 'pg'
-end
