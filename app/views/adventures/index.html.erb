@@ -37,11 +37,11 @@
         <td><img src="<%= adventure.picture %>" alt="<%= adventure.name %>" /></td>
         <td><%= adventure.location %></td>
         <td><%= adventure.visit %></td>
-        <div class="crud-menu">
-          <td><%= link_to 'Show', adventure %></td>
-          <td><%= link_to 'Edit', edit_adventure_path(adventure) %></td>
-          <td><%= link_to 'Destroy', adventure, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        </div>
+        <td class="crud-menu">
+          <%= link_to 'Show', adventure %>
+          <%= link_to 'Edit', edit_adventure_path(adventure) %>
+          <%= link_to 'Destroy', adventure, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </td>
       </tr>
     <% end %>
   </tbody>
