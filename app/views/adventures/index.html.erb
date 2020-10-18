@@ -6,6 +6,12 @@
   th, td {
     vertical-align: top;
   }
+  .crud-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 1em;
+  }
 </style>
 <p id="notice"><%= notice %></p>
 
@@ -31,9 +37,11 @@
         <td><img src="<%= adventure.picture %>" alt="<%= adventure.name %>" /></td>
         <td><%= adventure.location %></td>
         <td><%= adventure.visit %></td>
-        <td><%= link_to 'Show', adventure %></td>
-        <td><%= link_to 'Edit', edit_adventure_path(adventure) %></td>
-        <td><%= link_to 'Destroy', adventure, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <div class="crud-menu">
+          <td><%= link_to 'Show', adventure %></td>
+          <td><%= link_to 'Edit', edit_adventure_path(adventure) %></td>
+          <td><%= link_to 'Destroy', adventure, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </div>
       </tr>
     <% end %>
   </tbody>
