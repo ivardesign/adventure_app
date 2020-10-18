@@ -4,9 +4,12 @@
     height: auto;
   }
   table {
-    border-spacing: 1em;
+    border-collapse: collapse;
   }
-  th {
+  th:not(.no-border) {
+    background: #333;
+    color: #fff;
+    padding: .5em;
     border-bottom: 1px solid #555;
   }
   th, td {
@@ -16,9 +19,7 @@
   td:nth-child(2) {
     max-width: 28em;
   }
-  .no-border {
-    border: none;
-  }
+
   .crud-menu {
     display: flex;
     flex-direction: column;
