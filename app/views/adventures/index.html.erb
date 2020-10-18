@@ -6,20 +6,22 @@
   table {
     border-collapse: collapse;
   }
+  tr:nth-child(2n+3) {
+    background: #efefef;
+  }
   th:not(.no-border) {
     background: #333;
     color: #fff;
-    padding: .5em;
     border-bottom: 1px solid #555;
   }
   th, td {
+    padding: .5em;
     vertical-align: top;
     text-align: left;
   }
   td:nth-child(2) {
     max-width: 28em;
   }
-
   .crud-menu {
     display: flex;
     flex-direction: column;
