@@ -2,6 +2,10 @@
 
 <h1>Adventures</h1>
 
+<%= link_to 'New Adventure', new_adventure_path %>
+
+<% @adventures.each do |adventure| %>
+
 <table>
   <thead>
     <tr>
@@ -15,7 +19,6 @@
   </thead>
 
   <tbody>
-    <% @adventures.each do |adventure| %>
       <tr>
         <td><%= adventure.name %></td>
         <td><%= adventure.description %></td>
@@ -28,10 +31,8 @@
           <%= link_to 'Destroy', adventure, method: :delete, data: { confirm: 'Are you sure?' } %>
         </td>
       </tr>
-    <% end %>
   </tbody>
 </table>
-
 <br>
-
-<%= link_to 'New Adventure', new_adventure_path %>
+<br>
+<% end %>
