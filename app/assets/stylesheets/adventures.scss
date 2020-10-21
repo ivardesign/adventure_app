@@ -9,7 +9,7 @@ body {
   color: $primary-color;
 }
 img {
-  max-width: 200px;
+  width: 280px;
   height: auto;
 }
 table {
@@ -31,8 +31,13 @@ th, td {
   vertical-align: top;
   text-align: left;
 }
-td:nth-child(2) {
-  max-width: 28em;
+th:nth-child(1), td:nth-child(1) {
+  max-width: 100px;
+}
+th:nth-child(2), td:nth-child(2) {
+  width: 28em;
+  min-width: 300px;
+  max-width: 34em;
 }
 .crud-menu {
   display: flex;
