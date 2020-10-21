@@ -39,6 +39,9 @@ th:nth-child(2), td:nth-child(2) {
   min-width: 300px;
   max-width: 34em;
 }
+th:nth-child(3), td:nth-child(3) {
+  width: 280px;
+}
 .crud-menu {
   display: flex;
   flex-direction: column;
